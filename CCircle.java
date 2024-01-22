@@ -12,4 +12,13 @@ public class CCircle extends COval
     {
         name = "CIRCLE";
     }
+
+    /**
+     * toString override returns a string output of the object instance
+     * @return the formatted string output to display attributes of CShape object
+     */
+    public String toString()
+    {
+        return ("Shape " + this.id + ": " + this.name + " " + this.x);
+    }
 }

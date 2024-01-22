@@ -14,7 +14,7 @@ public abstract class CShape
     protected int x; // horizontal measurement for the shape
     protected int y; // vertical measurement for the shape
     protected String name; // the name of the shape
-    private int id; // each shape gets a unique ID number, starting at 1
+    protected int id; // each shape gets a unique ID number, starting at 1
     private static int idCounter = 0; // shared attribute
 
     /**
