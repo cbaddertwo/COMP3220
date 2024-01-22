@@ -1,19 +1,15 @@
+/**
+ * @author Christina Reynolds-Badder
+ * 
+ * COval is a child class of CShape; it is responsible for setting the name String in its constructor
+ */
 public class COval extends CShape // COval is a subclass of CShape
 {
-   
-
-    public void setHRadius(int l) // Set horizontal radius of shape, also uses isValid to make sure int is between 1-100
+    /**
+     * Overloaded contstructor for COval, sets the name of the CShape object
+     */
+    public COval ()
     {
-        this.setX(isValid(l));
+        name = "OVAL";
     }
-    public void setVRadius(int l) // Set horizontal radius of shape, also uses isValid to make sure int is between 1-100 
-    {
-        this.setY(isValid(l));
-    }
-    private int isValid(int n) // This function will validate an int to make sure it is between 1 and 100
-    {
-        if (0<n && n<=100) return n;
-        else return -1;
-    }
-
 }

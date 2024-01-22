@@ -1,16 +1,15 @@
+/** 
+ * @author Christina Reynolds-Badder
+* 
+* CRectangle is a child class of CShape; it is responsible for setting the name String in its constructor
+*/
 public class CRectangle extends CShape
     {
-        public void setWidth(int l) // Set width of shape, also uses isValid to make sure int is between 1-100
+        /**
+        * Overloaded contstructor for CRectangle, sets the name of the CShape object
+        */
+        public CRectangle ()
         {
-            this.x = isValid(l);
-        }
-        public void setLength(int l) // Set length of shape, also uses isValid to make sure int is between 1-100 
-        {
-            this.y = isValid(l);
-        }
-        private int isValid(int n) // This function will validate an int to make sure it is between 1 and 100
-        {
-            if (0<n && n<=100) return n;
-            else return -1;
+            name = "RECTANGLE";
         }
     }

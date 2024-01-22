@@ -4,41 +4,26 @@
  * Class CShape is an abstract class that provides other classes with a blueprint for a shape object.
  * CShape maintains an x and y variable to hold integer dimensions, which must be a positive integer between 1-100
  * CShape maintains a name string to hold the shapes name
- * CShape maintains a unique ID for the employee, which must be a positive integer starting from 1
- * ID is auto generated in sequence
+ * CShape maintains a unique ID for the shape object, which must be a positive integer starting from 1
+ * CShape maintains a static idCounter to keep track of the unique ID of the shape object
+ * ID is auto generated in sequence, starting from 1
  */
 
 public abstract class CShape
 {
-    private int x; // horizontal measurement for the shape
-    private int y; // vertical measurement for the shape
-    private String name; // the name of the shape
+    protected int x; // horizontal measurement for the shape
+    protected int y; // vertical measurement for the shape
+    protected String name; // the name of the shape
     private int id; // each shape gets a unique ID number, starting at 1
     private static int idCounter = 0; // shared attribute
 
     /**
      * CShape overloaded constructor will construct a CShape object, set ID, and increment static IDCounter
      */
-    public CShape () 
+    public CShape ()
     {
         id=++idCounter; // auto-increment id counter each time CShape object is created
         
-    }
-    /**
-     * isValidName checks if a name isn't blank
-     * @param name as a string
-     * @return false if name is blank, true otherwise
-     */
-    
-    /**
-     * setName changes the value of the name String to a valid value
-     * @param name String to be set
-     * @return the name stored in the object, if name is blank, it remains unchanged
-     */
-    public String setName(String name)
-    {
-        if (isValidName(name)) this.name = name;
-        return this.name;
     }
 
     /**
@@ -48,15 +33,6 @@ public abstract class CShape
     public String getName ()
     {
         return this.name;
-    }
-
-    /**
-     * This method returns the int id of the CShape object
-     * @return int id of the CShape object
-     */
-    public int getID ()
-    {
-        return this.id;
     }
 
     /**
@@ -107,17 +83,8 @@ public abstract class CShape
     }
 
     /**
-     * isValidName verifies that name is not blank; returns true if name is not blank; false if otherwise
-     * @param name String that cannot be empty
-     * @return true if String is not blank; false if otherwise
-     */
-    private boolean isValidName(String name)
-    {
-        if (name.isBlank()) return false;
-        else return true;
-    }
-    /**
      * toString override returns a string output of the object instance
+     * @return the formatted string output to display attributes of CShape object
      */
     public String toString()
     {
